@@ -4,12 +4,15 @@ using namespace std;
 
 int main(){
 	string nama, nim, user_fakul, fakul[3];
-	fakul[0] = "Fakultas Ilmu Komputer";
-	fakul[1] = "Fakultas Ekonomi dan Sosial";
-	fakul[2] = "Fakultas Sains dan Teknologi";
+	char pL;
 	int fakultas, prodi, spp_tetap, sks, spp_vbl, totbay;
 	bool kelas;
 	
+	fakul[0] = "Fakultas Ilmu Komputer";
+	fakul[1] = "Fakultas Ekonomi dan Sosial";
+	fakul[2] = "Fakultas Sains dan Teknologi";
+	
+	do {
 	// Code Input Nama dan Nim 
 	cout<<"Masukkan NIM Anda : "<<endl;
 	cin>>nim;
@@ -64,5 +67,11 @@ int main(){
 	cout<<"jumlah SPP Variabel yang harus di bayarkan : Rp."<<spp_vbl<<endl;
 	cout<<"Maka Total Bayar : Rp."<<totbay;
 	
-	
+	cout<<"\nApakah ingin melakukan lagi [Y/N} : ";
+	cin>>pL;
+		
+	}
+	while (pL == 'y' && pL == 'Y');
+	cout<<"-----Berakhir-----"<<Endl;
+	return(0);
 }
